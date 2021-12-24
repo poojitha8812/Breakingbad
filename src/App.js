@@ -1,6 +1,5 @@
 import { useEffect,useState } from 'react';
 import axios from 'axios';
-import logo from './logo.svg';
 import './App.css';
 
 
@@ -35,7 +34,8 @@ return (
 
                     <div className="mar" style={{display:"inline-block"}}>
                       
-                       <div className="data App " key={data.id} >
+                       <div className="data App "  >
+                         <span>{data.Char_id}</span>
                          
                          <h3 style={{color:"white"}}>{data.name}</h3>
                          <span><img src={data.img} alt="none" style={{height:"200px", width:"200px"}} /></span>
@@ -48,7 +48,7 @@ return (
 
                        
                     )
-                     }) : <h3>No data yet</h3> }
+                     }) : <></> }
         </>
     )
 }
